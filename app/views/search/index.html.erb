@@ -3,9 +3,9 @@
 <h2>Members</h2>
 <% @members.each do |member| %>
   <section class='members'>
-    <h3>Name: <%= member.name %></h3>
-    <p>Affiliation: <%= member.affiliation %></p>
-    <p>Allies: <%= member.allies %></p>
-    <p>Enemies: <%= member.enemies %></p>
+    <h3>Name: <%= member.name %></h3><%= image_tag(member.photo) unless member.photo.nil? %></br>
+    <%= "Affiliation: #{member.affiliation}"  if member.affiliation %></br>
+    <%= "Allies: #{member.allies}" if !member.allies.empty? %></br>
+    <%= "Enemies: #{member.enemies}" if !member.enemies.empty? %>
     </section>
 <% end %>
