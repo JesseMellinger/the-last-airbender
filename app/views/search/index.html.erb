@@ -1,0 +1,11 @@
+<h2>Total Members: <%= @members.count %></h2>
+
+<h2>Members</h2>
+<% @members.each do |member| %>
+  <section class='members'>
+    <h3>Name: <%= member.name %></h3>
+    <p>Affiliation: <%= member.affiliation %></p>
+    <p>Allies: <%= member.allies %></p>
+    <p>Enemies: <%= member.enemies %></p>
+    </section>
+<% end %>
