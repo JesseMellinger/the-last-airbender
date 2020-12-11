@@ -1,10 +1,7 @@
 class AirbenderDataService
   def self.members_of_nation(nation)
-    response = conn.get do |req|
-      req.params['affiliation'] = "#{nation}"
-    end
-    a = parse_response(response)
-    require "pry"; binding.pry
+    response = conn.get("?affiliation=#{nation}")
+    parse_response(response)
   end
 
   private
